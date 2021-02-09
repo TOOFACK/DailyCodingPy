@@ -10,20 +10,14 @@ d = {2: "abc",
 c = input()
 
 
-def gen_leeters(index, length, d, c, ans):
+def gen_leeters(length, d, c, ans):
     if length == len(c):
-        print(ans)
-        if index <= len(d[int(c[length - 1])]):
-            ans = ans[:-1]
-            gen_leeters(index + 1, length, d, c, ans + d[int(c[length - 1])][index + 1])
-        else:
-            return
+        print(ans,end=" ")
 
-    if length < len(c):
-        # print(countF, "cF", countS, "cS")
-        # for i in d[b]:
-        #     print(d[a][countF], i)
-        gen_leeters(index, length + 1, d, c, ans + d[int(c[length])][index])
+        return
+
+    for i in d[int(c[length])]:
+        gen_leeters(length+1,d,c,ans+i)
 
 
-gen_leeters(0, 0, d, c, "")
+gen_leeters(0, d, c, "")
