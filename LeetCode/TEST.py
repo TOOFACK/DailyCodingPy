@@ -1,14 +1,11 @@
 from collections import deque
 
-des = deque()
-des.append(2)
-des.pop()
-print(des)
-if des:
-    print("hi")
-n = "23"
-for i in   n:
-    print(i)
-    n
-print(n)
-print()
+lst = [1, 2, 3, 4, 5, 6]
+s = 0
+for i in lst:
+    for j in lst:
+        for k in lst:
+            if i + j + k > 12:
+                s += 1
+print(s)
+
