@@ -8,4 +8,5 @@ for i in lst:
             if i + j + k > 12:
                 s += 1
 print(s)
+print("a" + str(123))
 
