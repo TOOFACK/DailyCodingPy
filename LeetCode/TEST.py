@@ -10,3 +10,6 @@ for i in lst:
 print(s)
 print("a" + str(123))
 
+piles = [1,2,3,4,5,6,7,8,9]
+
+print(n_piles)
