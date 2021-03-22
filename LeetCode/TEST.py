@@ -1,4 +1,6 @@
 from collections import deque
 
-print(8//10)
+lst = [1,2,3]
+print(lst[0:1])
+print(lst)
 
