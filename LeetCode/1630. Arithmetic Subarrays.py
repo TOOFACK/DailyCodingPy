@@ -1,24 +1,22 @@
-class Solution:
-
+class Solution(object):
     def checkArithmeticSubarrays(self, nums, l, r):
+        """
+        :type nums: List[int]
+        :type l: List[int]
+        :type r: List[int]
+        :rtype: List[bool]
+        """
         ans = []
         for i in range(len(l)):
-            tr_false = False
-            temp_arr = nums[l[i]: r[i] + 1]
-
-            list.sort(temp_arr)
-            prev_sum = temp_arr[1] - temp_arr[0]
-            for j in range(len(temp_arr) - 1):
-                if prev_sum != temp_arr[j + 1] - temp_arr[j]:
-                    tr_false = True
+            tmp = nums[l[i]:r[i]+1]
+            tmp = sorted(tmp)
+            is_arifmetic = True
+            for j in range(0,len(tmp)-1):
+                if tmp[1] - tmp[0] != tmp[j+1]-tmp[j]:
+                    is_arifmetic = False
                     break
-            if tr_false:
-                ans.append("false")
-            else:
-                ans.append("true")
+            ans.append(is_arifmetic)
         print(ans)
-        return ans
 
-
-s = Solution()
-s.checkArithmeticSubarrays([4, 6, 5, 9, 3, 7], [0, 0, 2], [2, 3, 5])
+s=Solution()
+s.checkArithmeticSubarrays([-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10], l = [0,1,6,4,8,7], r = [4,4,9,7,9,10])
