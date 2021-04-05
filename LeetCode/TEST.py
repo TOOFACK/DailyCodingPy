@@ -1,5 +1,5 @@
 import collections
 from collections import deque
 
-for i in range(1,3,2):
-    print(i)
+tr = [1,2,4,5]
+print(tr[-1:-1:-1])
