@@ -1,3 +1,4 @@
+import collections
 class CombinationIterator(object):
 
     def __init__(self, characters, combinationLength):
@@ -8,9 +9,6 @@ class CombinationIterator(object):
         self.dic = set()
 
         def dfs(stroka, dict, lenght):
-            print("stroka = ", stroka)
-            print("dict = ", dict)
-            print("len = ", len(stroka))
             if len(stroka) == lenght:
                 self.dic.add(stroka)
                 return
@@ -23,8 +21,23 @@ class CombinationIterator(object):
         for s in characters:
             dict = dict.replace(s, "")
             dfs(s, dict, combinationLength)
+        self.q = collections.deque(sorted(self.dic))
 
-        print(sorted(self.dic))
 
+    def next(self):
+        """
+        :rtype: str
+        """
+        return self.q.popleft()
 
-s = CombinationIterator("gkosu", 3)
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        return self.q
+
+# Your CombinationIterator object will be instantiated and called as such:
+# obj = CombinationIterator(characters, combinationLength)
+# param_1 = obj.next()
+# param_2 = obj.hasNext()
+
