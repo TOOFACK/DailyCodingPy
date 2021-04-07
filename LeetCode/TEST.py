@@ -1,30 +1,18 @@
-class CombinationIterator(object):
+a = [0,1,2,3,4,5,6,7,8,9]
 
-    def __init__(self, characters, combinationLength):
-        """
-        :type characters: str
-        :type combinationLength: int
-        """
-        self.dic = set()
+n = 3
+start = 0
+end = 9
+while start < end:
+    mid = (start + end)//2
+    print("mid =", mid)
+    if a[mid] < n:
+        start = mid + 1
+    else:
+        end = mid
+    print("start = ", start)
+    print("end = ", end)
 
-        def dfs(stroka, dict, lenght):
-            print("stroka = ", stroka)
-            print("dict = ", dict)
-            print("len = ", len(stroka))
-            if len(stroka) == lenght:
-                self.dic.add(stroka)
-                return
-            new_dict = dict
-            for s in dict:
-                new_dict = new_dict.replace(s, "")
-                dfs(stroka + s, new_dict, lenght)
-
-        dict = characters
-        for s in characters:
-            dict = dict.replace(s, "")
-            dfs(s, dict, combinationLength)
-
-        print(sorted(self.dic))
-
-
-s = CombinationIterator("gkosu", 3)
+print(a[mid])
+print(a[start])
+print(a[end])
