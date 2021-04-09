@@ -1,18 +1,10 @@
-a = [0,1,2,3,4,5,6,7,8,9]
+slow = 0
+fast = 0
+mas = [4,3,2,7,8,2,3,1]
+att = 1
 
-n = 3
-start = 0
-end = 9
-while start < end:
-    mid = (start + end)//2
-    print("mid =", mid)
-    if a[mid] < n:
-        start = mid + 1
-    else:
-        end = mid
-    print("start = ", start)
-    print("end = ", end)
+while True:
+    print(mas)
+    if slow != fast and mas[slow] == mas[fast]:
 
-print(a[mid])
-print(a[start])
-print(a[end])
+
