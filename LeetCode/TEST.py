@@ -1,3 +1,3 @@
-arr = [3,4,2,1]
+ans = "str"
 
-print(arr[:1:-1] + arr[:1])
+print(ans[0].isdigit())
