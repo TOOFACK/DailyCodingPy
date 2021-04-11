@@ -1,3 +1,2 @@
-ans = "str"
-
-print(ans[0].isdigit())
+a = [(1,1),(2,2),(3,3)]
+print(a + [(2,2)])
