@@ -3,6 +3,7 @@ import collections
 
 class Solution(object):
     def __init__(self):
+
         self.ans = []
 
     def permute(self, nums):
