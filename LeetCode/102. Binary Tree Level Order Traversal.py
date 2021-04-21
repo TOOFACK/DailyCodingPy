@@ -48,5 +48,7 @@ class Solution(object):
                         q.append(n.left)
                     if n.right:
                         q.append(n.right)
+        if not root:
+            return []
         bfs(root)
 
