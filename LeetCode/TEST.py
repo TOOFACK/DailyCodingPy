@@ -1,4 +1,5 @@
 import collections
 w = "abc"
 
-print(w[-1])
+w -= "a"
+print(w)
