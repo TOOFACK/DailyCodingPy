@@ -1,4 +1,5 @@
 import collections
 from math import sqrt
 
-print(round(sqrt(13)))
+S = set("abc")
+print(S)
