@@ -44,6 +44,7 @@ class Solution(object):
         dfs_canon(root1)
         dfs_canon(root2)
         dfs(root1, root2)
+
         return self.tr
 
 
