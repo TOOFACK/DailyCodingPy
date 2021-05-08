@@ -1,5 +1,3 @@
 import collections
 from math import sqrt
-a = "abc"
-mas = a.
-print(mas)
+print(0 <= 3 < 3)
