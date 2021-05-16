@@ -1,3 +1,5 @@
-d= {1 : 2, 2 : 1}
-print(d.items())
-print(sorted(d.items(), key=lambda x: x[1]))
+s = "5525"
+b = 2
+tmp = s[len(s) - b:] + s[0:len(s) - b]
+# print(s[0:])
+print(tmp)
