@@ -1,4 +1,2 @@
-a = "set"
-a = set(a)
-b = set("tes")
-print(a == b)
+print(10 % 9)
+print(8 // 9)
