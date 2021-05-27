@@ -23,7 +23,7 @@ class Solution(object):
             else:
                 return False
 
-            if not(slow or fast):
+            if not(slow and fast):
                 return False
 
             if slow == fast:
