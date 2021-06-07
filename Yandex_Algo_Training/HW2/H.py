@@ -12,18 +12,13 @@ for j in range(max(a), mini-1 , -1):
     for i in range(0 , id[j - mini]):
         a[k] = j
         k += 1
-# print(a)
+print(a)
 
-l_1, l_2 = a[0],a[1]
-max_1, max_2 = a[-1],a[-2]
-if l_1*l_2 > max_1*max_2:
-    if l_1 <= l_2:
-        print(l_1, l_2)
-    else:
-        print(l_2,l_1)
+max_1, max_2, max_3 = a[0],a[1],a[2]
+l_1, l_2, l_3 = a[-1],a[-2],a[-3]
+if l_1*l_2*max_1 > max_1*max_2*max_3:
+    print(l_1,l_2 ,max_1)
 else:
-    if max_1 < max_2:
-        print(max_1,  max_2)
-    else:
-        print(max_2, max_1)
+    print(max_1, max_2, max_3)
+
 
